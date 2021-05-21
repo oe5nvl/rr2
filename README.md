@@ -24,22 +24,21 @@ change content to:
 
 <VirtualHost *:80>
 	
-	ServerName localhost
+    ServerName localhost
 
-	ServerAdmin webmaster@localhost
-	DocumentRoot /var/www/html
+    ServerAdmin webmaster@localhost
+    DocumentRoot /var/www/html
 
-	ScriptAlias "/cgi-bin/" "/var/www/html/cgi-bin/"
-	<Directory "/var/www/html/cgi-bin/">
+    ScriptAlias "/cgi-bin/" "/var/www/html/cgi-bin/"
+    <Directory "/var/www/html/cgi-bin/">
                 AllowOverride None
                 Options +ExecCGI
                 AddHandler cgi-script .cgi .pl .py
                 Require all granted
     </Directory>
 
-	ErrorLog ${APACHE_LOG_DIR}/error.log
-	CustomLog ${APACHE_LOG_DIR}/access.log combined
-		
+    ErrorLog ${APACHE_LOG_DIR}/error.log
+    CustomLog ${APACHE_LOG_DIR}/access.log combined		
 </VirtualHost>
 
 
