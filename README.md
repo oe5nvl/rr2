@@ -22,7 +22,7 @@ nano /etc/apache2/sites-available/000-default.conf
 
 change content to:
 
-<VirtualHost *:80>
+ <VirtualHost *:80>
 	
     ServerName localhost
 
@@ -39,7 +39,7 @@ change content to:
 
     ErrorLog ${APACHE_LOG_DIR}/error.log
     CustomLog ${APACHE_LOG_DIR}/access.log combined		
-</VirtualHost>
+ </VirtualHost>
 
 
 
