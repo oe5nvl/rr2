@@ -355,15 +355,19 @@ function 	Trace_Spectre(spectre){
 	var X=0
 	var dX=ecran.innerW/spectre.length;
 	var H=fenetres.spectreH;
+	// nvl var S='<svg height="'+H+'" width="'+ecran.innerW+'" >'; //SVG type of drawing
+	// S+='<defs><linearGradient id="grad1" x1="0%" y1="0%" x2="0%" y2="100%">';
+    // S+='<stop offset="0%" style="stop-color:rgb(255,100,100);stop-opacity:1" />';
+	// S+='<stop offset="33%" style="stop-color:rgb(200,200,100);stop-opacity:1" />';
+	// S+='<stop offset="66%" style="stop-color:rgb(100,100,150);stop-opacity:1" />';
+    // S+='<stop offset="100%" style="stop-color:rgb(0,0,0);stop-opacity:1" />';
+    // S+='</linearGradient>';
+	// S+='</defs>'
+	// S+='<polygon style="stroke:orange;stroke-width:1" points="0,256 ';
+
 	var S='<svg height="'+H+'" width="'+ecran.innerW+'" >'; //SVG type of drawing
-	S+='<defs><linearGradient id="grad1" x1="0%" y1="0%" x2="0%" y2="100%">';
-    S+='<stop offset="0%" style="stop-color:rgb(255,100,100);stop-opacity:1" />';
-	S+='<stop offset="33%" style="stop-color:rgb(200,200,100);stop-opacity:1" />';
-	S+='<stop offset="66%" style="stop-color:rgb(100,100,150);stop-opacity:1" />';
-    S+='<stop offset="100%" style="stop-color:rgb(0,0,0);stop-opacity:1" />';
-    S+='</linearGradient>';
-	S+='</defs>'
-	S+='<polygon style="stroke:orange;stroke-width:1" points="0,256 ';
+		S+='<polygon style="stroke:green;stroke-width:1" points="0,256 ';
+
 	var Sl=spectre.length;
 	var Sl2=spectre.length/2;
 	var Sm1=0.15*Sl; //Limits to look for minimum noise, except bad edges and middle
