@@ -126,11 +126,6 @@ sudo apt-get install gr-iio
 
 sudo apt-get install libiio-utils
 
-
-optional:
-
-sudo apt-get install gqrx-sdr
-
 sudo apt-get install python3-paramiko
 
 sudo apt install python3-pip
@@ -139,6 +134,12 @@ sudo apt-get install python3-setuptools
 
 sudo pip3 install websockets
 
+optional:
+
+sudo apt-get install gqrx-sdr
+
+
+# Install F1ATB SDR (oe5nvl modification)
 
 cd ~/
 
@@ -192,7 +193,7 @@ https://your raspi ip
 
 
 
-# start program
+# start sdr program
 
 a) reboot
 
