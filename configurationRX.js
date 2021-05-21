@@ -52,7 +52,6 @@ Label.push([10490000000,"Upper Beacon"]);
 Label.push([10489790000,"QSO Fr"]);
 Label.push([10489860000,"Emergency"]);
 
-
 // Zones / Areas in colour
 //*************************
 var Zone=new Array();
