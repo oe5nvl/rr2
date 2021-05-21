@@ -39,9 +39,9 @@ change content to:
 
 	ErrorLog ${APACHE_LOG_DIR}/error.log
 	CustomLog ${APACHE_LOG_DIR}/access.log combined
-	
-	
+		
 </VirtualHost>
+
 
 
 sudo a2enmod cgid
