@@ -10,6 +10,7 @@ Short info for installation:
 Raspberry Pi4 
 
 apt-get update
+
 apt-get upgrade
 
 
@@ -59,32 +60,43 @@ sudo apt install lxterminal
 Add to the configuration file /etc/gnuradio/conf.d/grc.conf in the [grc] section
 
 [grc]
+
 xterm_executable = /usr/bin/lxterminal
 
 ssh -X pi@192.168.8.3
 
 #testen
+
 gnuradio-companion
 
 
 sudo apt-get install cmake build-essential libusb-1.0-0-dev
+
 sudo apt-get install pkg-config
 
 
 # rtl sdr (optional) - not tested
+
 We clone Osmocom in the Downloads folder of the root user, for example:
 
 cd ~/Downloads
+
 git clone https://github.com/osmocom/rtl-sdr.git
 
 Go to the rtl-sdr folder and chain the commands: 
 
 cd rtl-sdr
+
 mkdir build
+
 cd build
+
 cmake ../ -DINSTALL_UDEV_RULES=ON -DDETACH_KERNEL_DRIVER=ON
+
 make
+
 make install
+
 ldconfig
 
 
@@ -95,7 +107,9 @@ sudo apt-get install gr-osmosdr
 
 
 # hackrf (optional) - not tested
+
 apt install hackrf
+
 hackrf_info
 
 With an RTL-SDR on the USB port, you have information by typing:
@@ -111,36 +125,53 @@ rtl_eeprom -h
 # Install Adalm-Pluto interface
 
 sudo apt-get install gr-iio
+
 sudo apt-get install libiio-utils
 
+
 optional:
+
 sudo apt-get install gqrx-sdr
 
 sudo apt-get install python3-paramiko
+
 sudo apt install python3-pip
+
 sudo apt-get install python3-setuptools
+
 sudo pip3 install websockets
 
 
 cd ~/
+
 mkdir app
+
 cd app
+
 git clone https://github.com/oe5nvl/rr2.git
+
 cd rr2
+
 sudo cp -r *  /var/www/html
 
 
 Attention: 
+
 Use this installation not on internet !!!
+
 SECURITY PEOBLEM !!!
 
 sudo chmod -R 777 /var/html
 
 sudo chmod 777 /var/www/html/*.py
+
 sudo chmod 777 /var/www/html/PY/*.py
+
 sudo chmod 777 /var/www/html/cgi-bin/*.py
 
+
 sudo chmod 666  /var/www/html/PY/*.txt
+
 sudo chmod 777 /var/www/html/cgi-bin/*.sh
 
 sudo chmod -R 777 /var/log/apache2
@@ -148,6 +179,7 @@ sudo chmod -R 777 /var/log/apache2
 sudo chmod 777 /var/www/html/log
 
 sudo crontab -e
+
 @reboot python3 /var/www/html/start_radio_manager_at_boot.py
 
 
@@ -171,6 +203,7 @@ or
 b)
 
 cd /var/www/html 
+
 python3 start_radio_manager_at_boot.py
 
 
