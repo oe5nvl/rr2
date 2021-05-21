@@ -20,7 +20,7 @@ apt install apache2 -y
 
 nano /etc/apache2/sites-available/000-default.conf  
 
-change content between <VirtualHost *:80> </VirtualHost>to:
+change content between <VirtualHost *:80> </ VirtualHost>to:
 
 
     ServerName localhost
