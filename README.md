@@ -1,5 +1,5 @@
 
-Testing F1ATB Remote SDR
+# Testing F1ATB Remote SDR
 
 https://github.com/F1ATB/Remote-SDR
 
@@ -13,7 +13,7 @@ apt-get update
 apt-get upgrade
 
 
-# GnuRadio 3.7.13 INSTALLIEREN !
+# Install Apache Web Server !
 
 apt install apache2 -y
 
@@ -49,7 +49,7 @@ systemctl restart apache2
 
 then check apache2 
 
-# GnuRadio 3.7.13 installation !
+# Install GnuRadio 3.7.13 
 
 sudo apt-get install gnuradio
 
@@ -71,7 +71,7 @@ sudo apt-get install cmake build-essential libusb-1.0-0-dev
 sudo apt-get install pkg-config
 
 
-# rtl sdr (optional)
+# rtl sdr (optional) - not tested
 We clone Osmocom in the Downloads folder of the root user, for example:
 
 cd ~/Downloads
@@ -89,13 +89,12 @@ ldconfig
 
 
 
-
 # install osmosdr 
 
 sudo apt-get install gr-osmosdr
 
 
-# hackrf (optional)
+# hackrf (optional) - not tested
 apt install hackrf
 hackrf_info
 
@@ -109,7 +108,7 @@ rtl_eeprom -h
 
 
 
-# Adalm-Pluto interface installation
+# Install Adalm-Pluto interface
 
 sudo apt-get install gr-iio
 sudo apt-get install libiio-utils
