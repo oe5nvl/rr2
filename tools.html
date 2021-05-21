@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name = "author" content = "André Buhart F1ATB">
+		
+        <title>Tools - Remote SDR</title>
+		<script  src="JS/jquery-3.4.1.min.js" ></script>
+		<script  src="JS/jquery.mousewheel.min.js" ></script>
+		<script  src="JS/jquery-ui/jquery-ui.min.js" ></script>
+		<script  src="JS/jquery.ui.touch-punch.min.js" ></script>
+		
+		
+		
+		<link href="JS/jquery-ui/jquery-ui.min.css" rel="stylesheet" type="text/css" />
+		<link href="css/tools.css?t=4" rel="stylesheet" type="text/css" />
+		<link href="css/main_TX.css?t=4" rel="stylesheet" type="text/css" />
+		
+    </head>
+    <body>
+		<div class="header">
+			<a href="/" class="head_TUX coral"></a>
+			<div class="titre"> Tools - Remote SDR</div>
+			<div class="head_FS coral" onclick='switch_page();'></div>			
+		</div>
+
+		<div  class="main">
+			<div class="fenetres">
+				<div class="gauche">
+					<ul>
+						<div class="display-table">
+							<div>
+								<div class="TI"></div>
+								<div class="T_centre RX">RX</div>
+								<div class="T_centre TX">TX</div>
+								<div class="T_centre RT">RX / TX</div>
+							</div>
+							<div>
+								<div  class="T_right TI">IP</div>
+								<div id="RX_IP" class="T_centre RX"></div>
+								<div id="TX_IP" class="T_centre TX"></div>
+								<div id="RT_IP" class="T_centre RT"></div>
+							</div>
+							<div>
+								<div class="TI"><li >RX configuration</li></div>
+								<div class="actifR RX" onclick="disp_py('Rx','RxConf');"></div>
+								<div class="actifT TX" onclick="disp_py('Tx','RxConf');"></div>
+								<div class="actif RT" onclick="disp_py('Rx','RxConf');"></div>
+							</div>
+							<div>
+								<div class="TI"><li >TX configuration</li></div>
+								<div class="actifR RX" onclick="disp_py('Rx','TxConf');"></div>
+								<div class="actifT TX" onclick="disp_py('Tx','TxConf');"></div>
+								<div class="actif RT" onclick="disp_py('Rx','TxConf');"></div>
+							</div>
+							<div>
+								<div class="TI"><li >List USB Devices / Liste les periphériques USB</li></div>
+								<div class="actif RX" onclick="disp_sh('Rx','USB');"></div>
+								<div class="actif TX" onclick="disp_sh('Tx','USB');"></div>
+								<div class="actif RT" onclick="disp_sh('Rx','USB');"></div>
+							</div>
+							<div>
+								<div class="TI"><li >RX Historic</li></div>
+								<div class="actif RX" onclick="disp_py('Rx','RxHistoric');"></div>
+								<div class="inactif TX" onclick="disp_py('Tx','RxHistoric');"></div>
+								<div class="actif RT" onclick="disp_py('Rx','RxHistoric');"></div>
+							</div>
+							<div>
+								<div class="TI"><li >TX Historic</li></div>
+								<div class="inactif RX" onclick="disp_py('Rx','TxHistoric');"></div>
+								<div class="actif TX" onclick="disp_py('Tx','TxHistoric');"></div>
+								<div class="actif RT" onclick="disp_py('Rx','TxHistoric');"></div>
+							</div>
+							<div>
+								<div class="TI"><li >Apache Server Errors / Erreurs Serveur Apache</li></div>
+								<div class="actif RX" onclick="disp_py('Rx','ApacheError');"></div>
+								<div class="actif TX" onclick="disp_py('Tx','ApacheError');"></div>
+								<div class="actif RT" onclick="disp_py('Rx','ApacheError');"></div>
+							</div>
+							<div>
+								<div class="TI"><li >Reboot Orange PI</li></div>
+								<div class="actif RX" onclick="disp_sh('Rx','RebootOPI');"></div>
+								<div class="actif TX" onclick="disp_sh('Tx','RebootOPI');"></div>
+								<div class="actif RT" onclick="disp_sh('Rx','RebootOPI');"></div>
+							</div>
+							<div>
+								<div class="TI"><h4>SDR Adalm-Pluto</h4></div>
+								<div class="T_centre RX">RX</div>
+								<div class="T_centre TX">TX</div>
+								<div class="T_centre RT">RX / TX</div>
+							</div>
+							<div>
+								<div class="TI"><li >Pluto Help / Aide Pluto</li></div>
+								<div class="actif RX" onclick="disp_py('Rx','PlutoHelp');"></div>
+								<div class="actif TX" onclick="disp_py('Tx','PlutoHelp');"></div>
+								<div class="actif RT" onclick="disp_py('Rx','PlutoHelp');"></div>
+							</div>
+							<div>
+								<div class="TI"><li >Pluto Reboot</li></div>
+								<div class="actif RX" onclick="disp_py('Rx','PlutoReboot');"></div>
+								<div class="actif TX" onclick="disp_py('Tx','PlutoReboot');"></div>
+								<div class="actif RT" onclick="disp_py('Rx','PlutoReboot');"></div>
+							</div>
+							<div>
+								<div class="TI"><h4>Hack RF One</h4></div>
+								<div class="T_centre RX">RX</div>
+								<div class="T_centre TX">TX</div>
+								<div class="T_centre RT">RX / TX</div>
+							</div>
+							<div>
+								<div class="TI"><li >HackRF Info</li></div>
+								<div class="actif RX" onclick="disp_sh('Rx','HackRFinfo');"></div>
+								<div class="actif TX" onclick="disp_sh('Tx','HackRFinfo');"></div>
+								<div class="actif RT" onclick="disp_sh('Rx','HackRFinfo');"></div>
+							</div>
+							
+							<div>
+								<div class="TI"><h4>RTL-SDR</h4></div>
+								<div class="T_centre RX">RX</div>
+								<div class="T_centre TX">TX</div>
+								<div class="T_centre RT">RX / TX</div>
+							</div>
+							<div>
+								<div class="TI"><li >RTL-SDR Info</li></div>
+								<div class="actif RX" onclick="disp_sh('Rx','RTLSDRinfo');"></div>
+								<div class="actif TX" onclick="disp_sh('Tx','RTLSDRinfo');"></div>
+								<div class="actif RT" onclick="disp_sh('Rx','RTLSDRinfo');"></div>
+							</div>
+							<div>
+								<div class="TI"><h4>GPIO</h4></div>
+								<div class="T_centre RX">RX</div>
+								<div class="T_centre TX">TX</div>
+								<div class="T_centre RT">RX / TX</div>
+							</div>
+							<div>
+								<div class="TI"><li> Test Oscillator Pin 26 (Opi One +) or Pin 10 (Opi Zero 2)</li></div>
+								<div class="actif RX" onclick="disp_sh('Rx','testpin26');"></div>
+								<div class="actif TX" onclick="disp_sh('Tx','testpin26');"></div>
+								<div class="actif RT" onclick="disp_sh('Rx','testpin26');"></div>
+							</div>
+							<div>
+								<div class="TI"><h4>Computer</h4></div>
+								<div class="T_centre RX"></div>
+								<div class="T_centre TX"></div>
+								<div class="T_centre RT"></div>
+							</div>
+							<div>
+								<div class="TI"><li> Test Microphone</li></div>
+								<div class="actif RX" onclick="test_micro();"></div>
+								<div class="TX" onclick=""></div>
+								<div class="actif RT" onclick="test_micro();"></div>
+							</div>
+							
+							
+						</div>
+						
+					</ul>
+				</div>
+				<div class="droite">
+					<div class="info">
+						<div id="info_en"></div>
+						<div id="info_fr"></div>
+					</div>
+					<div id="terminal"></div>
+				</div>
+				
+				
+			</div>	
+		</div>
+		
+		
+		
+		
+		
+			
+		<script type="text/javascript" src="JS/tools.js" ></script>
+		<script type="text/javascript" >
+
+				$( document ).ready(function() {			
+					Init_Page_Tools();						
+						
+				});
+				$(window).resize(function(){
+				  window_resize();
+				  
+				});
+		</script>
+		
+    </body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name = "author" content = "André Buhart F1ATB">
+		
+        <title>Remote SDR</title>
+		<script  src="JS/jquery-3.4.1.min.js" ></script>
+		<link href="css/index.css?t=4" rel="stylesheet" type="text/css" />
+		
+		
+    </head>
+    <body>
+	<canvas id="canvas_tux"></canvas>
+	<div class="remote"><a href="remote_sdr.html" >Remote SDR</a></div>
+	<div class="tools"><a href="/tools.html" >Tools</a></div>
+	<div id="version">xxx</div>
+	<script  src="JS/remote_sdr.js" ></script>
+		<script  >
+				$(window).resize(function(){
+				  window_resize();
+				});
+				function window_resize(){
+					var f= window.innerHeight/50;
+					$("body").css("font-size",f);
+				}
+			$("#version").html(Version);
+			window_resize();
+		</script>
+		<script  type="module" src="/3D/index_m.js" ></script>
+    </body>
+</html>
