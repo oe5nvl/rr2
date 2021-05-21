@@ -138,6 +138,7 @@ optional:
 
 sudo apt-get install gqrx-sdr
 
+sudo kdconfig
 
 # Install F1ATB SDR (oe5nvl modification)
 
@@ -203,7 +204,7 @@ b)
 
 cd /var/www/html 
 
-python3 start_radio_manager_at_boot.py
+./python3 start_radio_manager_at_boot.py
 
 
 
