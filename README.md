@@ -7,16 +7,16 @@ https://github.com/F1ATB/Remote-SDR
 
 Short info for installation:
 
-Raspberry Pi4 
+-Raspberry Pi4 
 
-apt-get update
+-apt-get update
 
-apt-get upgrade
+-apt-get upgrade
 
 
 # Install Apache Web Server !
 
-apt install apache2 -y
+-apt install apache2 -y
 
 nano /etc/apache2/sites-available/000-default.conf  
 
