@@ -115,11 +115,7 @@ Go to the rtl-sdr folder and chain the commands:
 
 With an RTL-SDR on the USB port, you have information by typing:
 
-- rtl_eeprom
-
-or
-
-- rtl_eeprom -h
+- rtl_eeprom   or    - rtl_eeprom -h
 
 
 
