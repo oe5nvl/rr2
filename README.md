@@ -147,7 +147,7 @@ rtl_eeprom -h
 
 # Install F1ATB SDR (oe5nvl modification)
 
-cd ~/
+- cd ~/
 
 - mkdir app
 
