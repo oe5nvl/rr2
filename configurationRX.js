@@ -20,7 +20,7 @@ BandesRX.push([24890000,24990000,"12 M"]);
 BandesRX.push([28000000,29700000,"10 M"]);
 BandesRX.push([50000000,52000000,"6 M"]);
 BandesRX.push([87600000,107900000,"FM"]);
-BandesRX.push([117975000,137000000,"Air"]);
+BandesRX.push([117975000,144000000,"Air"]);
 BandesRX.push([144000000,146000000,"2 M"]);
 BandesRX.push([430000000,440000000,"70 cm"]);
 BandesRX.push([2400000000,2400500000,"QO-100 Up"]);

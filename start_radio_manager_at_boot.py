@@ -2,7 +2,7 @@ import time
 import sys
 import os
 import subprocess
-print(1)
+
 adr_runing_rx_radio = '/var/www/html/PY/remote_runing_rx_radio.txt'
 adr_runing_tx_radio = '/var/www/html/PY/remote_runing_tx_radio.txt'
 
@@ -15,8 +15,6 @@ f_log = open(adr_log, 'a')
 sys.stdout = f_log 
 sys.stderr = f_log   
 
-print(2)
-
 # Clear any old process
 fo = open(adr_runing_rx_radio, "w")
 fo.write("") 
@@ -24,26 +22,22 @@ fo.close()
 fo = open(adr_runing_tx_radio, "w")
 fo.write("") 
 fo.close()
-print(3)
+
 # copy authorization to apache to access GPIO as root
-#os.system("cp /var/www/html/cgi-bin/python_web /etc/sudoers.d/python_web")
+os.system("cp /var/www/html/cgi-bin/python_web /etc/sudoers.d/python_web")
 
 
 in_progress_rx = ""
 in_progress_tx = ""
 fo_rx = open(adr_runing_rx_radio, "r")
 fo_tx = open(adr_runing_tx_radio, "r")
-print(4)
+
 while True :
     #RX
     position = fo_rx.seek(0, 0)
     demand_rx = fo_rx.read().strip()
-
-    #print("<"+demand_rx+">")
-    #print("-"+in_progress_rx+"+")
     
-    if demand_rx != in_progress_rx :
-        #print(demand_rx)        
+    if demand_rx != in_progress_rx :    
         if in_progress_rx !="" :
             print("radio select empty")
             rx_gnuradio.kill()
@@ -72,7 +66,6 @@ while True :
             if demand_rx=="hack_am":
                 rx_gnuradio=subprocess.Popen(["python2" , "/var/www/html/PY/hack_rx_am_v2.py" ])
             if demand_rx=="pluto_ssbnvl":
-                print(1)
                 rx_gnuradio=subprocess.Popen(["python2" , "/var/www/html/PY/pluto_rx_ssb_v2.py" ])
             if demand_rx=="pluto_nbfmnvl":
                 rx_gnuradio=subprocess.Popen(["python2" , "/var/www/html/PY/pluto_rx_nbfm_v2.py" ])
