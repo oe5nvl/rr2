@@ -14,7 +14,7 @@ Short info for installation:
 - apt-get upgrade
 
 
-# Install Apache Web Server !
+# Install Apache Web Server
 
 - apt install apache2 -y
 
@@ -139,7 +139,7 @@ rtl_eeprom -h
 
 - sudo pip3 install websockets
 
-optional:
+# optional: Install gqrx
 
 - sudo apt-get install gqrx-sdr
 
