@@ -55,7 +55,7 @@ then check apache2
 - sudo apt install lxterminal
 
 
-Add to the configuration file /etc/gnuradio/conf.d/grc.conf in the [grc] section
+# Add to the configuration file /etc/gnuradio/conf.d/grc.conf in the [grc] section
 
 [grc]
 
@@ -67,14 +67,16 @@ ssh -X pi@192.168.8.3
 
 - gnuradio-companion
 
-id ok:
+if ok:
+
+# Install usb support
 
 - sudo apt-get install cmake build-essential libusb-1.0-0-dev
 
 - sudo apt-get install pkg-config
 
 
-# rtl sdr (optional) - not tested
+# Install rtl sdr (optional) - not tested
 
 We clone Osmocom in the Downloads folder of the root user, for example:
 
@@ -100,12 +102,12 @@ Go to the rtl-sdr folder and chain the commands:
 
 
 
-# install osmosdr 
+# Install osmosdr 
 
 - sudo apt-get install gr-osmosdr
 
 
-# hackrf (optional) - not tested
+# Install hackrf (optional) - not tested
 
 - apt install hackrf
 
@@ -158,11 +160,14 @@ cd ~/
 - sudo cp -r *  /var/www/html
 
 
-Attention: 
+
+# Attention: 
 
 Do not use this installation on internet !!!
 
 SECURITY PROBLEM !!!
+
+# modify access rights
 
 - sudo chmod -R 777 /var/html
 
@@ -192,16 +197,18 @@ add line below:
 
 # Enalbe Chrome Browser for MIC Tx:
 
-Type in the asdress fiels in Chrome
+Type in the address field in Chrome
 
 - chrome://flags
 
-Add in fiels:
+Add in section:
+
 "Insecure origins treated as secure
 Treat given (insecure) origins as secure origins. Multiple origins can be supplied as a comma-separated list. Origins must have their protocol specified e.g. "http://example.com". For the definition of secure contexts, see https://w3c.github.io/webappsec-secure-contexts/ – Mac, Windows, Linux, Chrome OS, Android"
 
 
 - https://your raspi ip
+- save 
 
 
 
