@@ -5,7 +5,7 @@
 # Title: NBFM Receiver V2- F1ATB - MARCH 2021
 # Author: F1ATB - BUHART
 # Description: RX NBFM for Adalm Pluto SDR
-# Generated: Sun May  2 06:31:07 2021
+# Generated: Thu May 27 03:17:20 2021
 ##################################################
 
 
@@ -74,7 +74,7 @@ class pluto_rx_nbfm_v2(gr.top_block):
         self.blocks_keep_m_in_n_0 = blocks.keep_m_in_n(gr.sizeof_gr_complex, int(1024*decim_LP), 204800, 0)
         self.blocks_float_to_short_1 = blocks.float_to_short(2048, 100)
         self.blocks_float_to_short_0 = blocks.float_to_short(1, 16000)
-        self.analog_simple_squelch_cc_0 = analog.simple_squelch_cc(Squelch, 1)
+        self.analog_simple_squelch_cc_0 = analog.simple_squelch_cc(Squelch, 0.001)
         self.analog_nbfm_rx_0 = analog.nbfm_rx(
         	audio_rate=int(samp_rate/120),
         	quad_rate=int(samp_rate/30),

@@ -26,6 +26,7 @@ BandesRX.push([430000000,440000000,"70 cm"]);
 BandesRX.push([2400000000,2400500000,"QO-100 Up"]);
 BandesRX.push([10489500000,10490000000,"QO-100 Down"]);
 BandesRX.push([10490000000,10500000000,"QO-100 WB Down"]);
+BandesRX.push([1080000000,1100000000,"AIR_1090"]);
 
 // Offset / Décallage en fréquence (ex:Antenne parabolique)
 //*********************************
