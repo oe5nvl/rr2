@@ -24,7 +24,7 @@ Short info for installation:
 
 
 
-<VirtualHost *:80>
+       <VirtualHost *:80>
 	
 	ServerName localhost
 
@@ -42,8 +42,7 @@ Short info for installation:
 	ErrorLog ${APACHE_LOG_DIR}/error.log
 	CustomLog ${APACHE_LOG_DIR}/access.log combined
 	
-	
-</VirtualHost>
+     </VirtualHost>
 
 
 
