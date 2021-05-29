@@ -221,7 +221,7 @@ Add in section:
 Treat given (insecure) origins as secure origins. Multiple origins can be supplied as a comma-separated list. Origins must have their protocol specified e.g. "http://example.com". For the definition of secure contexts, see https://w3c.github.io/webappsec-secure-contexts/ – Mac, Windows, Linux, Chrome OS, Android"
 
 
-- https://your raspi ip
+- https://your_raspi_ip
 - save 
 
 
@@ -237,6 +237,12 @@ b)
 cd /var/www/html 
 
 ./python3 start_radio_manager_at_boot.py
+
+# Start the client
+
+http://your_raspi_ip
+
+# Have a lot of fun !
 
 
 
