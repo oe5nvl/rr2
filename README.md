@@ -209,7 +209,7 @@ add line below:
 @reboot python3 /var/www/html/start_radio_manager_at_boot.py
 
 
-# Enalbe Chrome Browser for MIC Tx:
+# Enable Chrome Browser for MIC Tx:
 
 Type in the address field in Chrome
 
