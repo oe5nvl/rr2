@@ -16,7 +16,7 @@ More details on https://f1atb.fr/
 You need a RaspberryPI installed with the latest operating system.
 See https://www.raspberrypi.org/documentation/installation/installing-images/
 
-# update/upgrad OS
+# Update/Upgrade OS
 
 - apt-get update
 
