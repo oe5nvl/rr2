@@ -1,13 +1,22 @@
 
 # Testing F1ATB Remote SDR
 
+This Remote SDR is based on the great development of F1ATB.
+
+The package was adapted to run on a RaspberryPI with Pluto SDR.
+
+Source:
 https://github.com/F1ATB/Remote-SDR
 
+More details on https://f1atb.fr/
 
 
-Short info for installation:
+# Installation:
 
-- Raspberry Pi4 
+You need a RaspberryPI installed with the latest operating system.
+See https://www.raspberrypi.org/documentation/installation/installing-images/
+
+# Update/Upgrade OS
 
 - apt-get update
 
@@ -20,24 +29,31 @@ Short info for installation:
 
 - nano /etc/apache2/sites-available/000-default.conf  
 
-change content between <VirtualHost *:80> </ VirtualHost>to:
+- delete existing content and copy/paste text below:
 
 
-    ServerName localhost
-
-    ServerAdmin webmaster@localhost
-    DocumentRoot /var/www/html
-
-    ScriptAlias "/cgi-bin/" "/var/www/html/cgi-bin/"
-    <Directory "/var/www/html/cgi-bin/">
-                AllowOverride None
-                Options +ExecCGI
-                AddHandler cgi-script .cgi .pl .py
-                Require all granted
-    </Directory>
-
-    ErrorLog ${APACHE_LOG_DIR}/error.log
-    CustomLog ${APACHE_LOG_DIR}/access.log combined		
+```
+> <VirtualHost *:80>
+>	
+>	ServerName localhost
+>
+>	ServerAdmin webmaster@localhost
+>	DocumentRoot /var/www/html
+>
+>	ScriptAlias "/cgi-bin/" "/var/www/html/cgi-bin/"
+>	<Directory "/var/www/html/cgi-bin/">
+>               AllowOverride None
+>                Options +ExecCGI
+>                AddHandler cgi-script .cgi .pl .py
+>                Require all granted
+>    </Directory>
+>
+>	ErrorLog ${APACHE_LOG_DIR}/error.log
+>	
+>	CustomLog ${APACHE_LOG_DIR}/access.log combined
+>	
+> </VirtualHost>
+```
 
 
 
@@ -63,7 +79,7 @@ xterm_executable = /usr/bin/lxterminal
 
 ssh -X pi@192.168.8.3
 
-#Star Gnuradio for test
+# Start Gnuradio for a test
 
 - gnuradio-companion
 
@@ -76,7 +92,7 @@ if ok:
 - sudo apt-get install pkg-config
 
 
-# Install rtl sdr (optional) - not tested
+# Optional: Install rtl sdr - not tested
 
 We clone Osmocom in the Downloads folder of the root user, for example:
 
@@ -107,7 +123,7 @@ Go to the rtl-sdr folder and chain the commands:
 - sudo apt-get install gr-osmosdr
 
 
-# Install hackrf (optional) - not tested
+# Optional: Install hackrf  - not tested
 
 - apt install hackrf
 
@@ -137,7 +153,7 @@ With an RTL-SDR on the USB port, you have information by typing:
 
 - sudo pip3 install websockets
 
-# optional: Install gqrx
+# Optional: Install gqrx
 
 - sudo apt-get install gqrx-sdr
 
