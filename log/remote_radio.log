@@ -144,3 +144,41 @@ Thu May 27 14:24:02 2021 Launch RX:  pluto_amnvl
 starte radio prozesse
 Start RX  pluto_amnvl
 Thu May 27 14:24:03 2021 Terminate TX pluto_nbfmnvl  due to  stop
+radio select empty
+Thu May 27 14:30:19 2021 Terminate RX pluto_amnvl  due to  pluto_nbfmnvl
+rx-demand:pluto_nbfmnvl
+Thu May 27 14:30:19 2021 Launch RX:  pluto_nbfmnvl
+starte radio prozesse
+Start RX  pluto_nbfmnvl
+Init TX Audio and ocillator pin 26
+Init TX parameter reception
+Init Tx Radio pluto_nbfmnvl
+Thu May 27 14:30:20 2021 Start TX pluto_nbfmnvl
+radio select empty
+Thu May 27 14:32:35 2021 Terminate RX pluto_nbfmnvl  due to  pluto_wbfmnvl
+rx-demand:pluto_wbfmnvl
+Thu May 27 14:32:35 2021 Launch RX:  pluto_wbfmnvl
+starte radio prozesse
+Start RX  pluto_wbfmnvl
+Thu May 27 14:32:36 2021 Terminate TX pluto_nbfmnvl  due to  stop
+radio select empty
+Thu May 27 14:35:14 2021 Terminate RX pluto_wbfmnvl  due to  pluto_nbfmnvl
+rx-demand:pluto_nbfmnvl
+Thu May 27 14:35:14 2021 Launch RX:  pluto_nbfmnvl
+starte radio prozesse
+Start RX  pluto_nbfmnvl
+Init TX Audio and ocillator pin 26
+Init TX parameter reception
+Init Tx Radio pluto_nbfmnvl
+Thu May 27 14:35:14 2021 Start TX pluto_nbfmnvl
+radio select empty
+Fri May 28 17:07:48 2021 Terminate RX pluto_nbfmnvl  due to  stop
+Fri May 28 17:07:48 2021 Terminate TX pluto_nbfmnvl  due to  stop
+rx-demand:pluto_nbfmnvl
+Fri May 28 17:07:48 2021 Launch RX:  pluto_nbfmnvl
+starte radio prozesse
+Start RX  pluto_nbfmnvl
+Init TX Audio and ocillator pin 26
+Init TX parameter reception
+Init Tx Radio pluto_nbfmnvl
+Fri May 28 17:07:51 2021 Start TX pluto_nbfmnvl
