@@ -1,13 +1,22 @@
 
 # Testing F1ATB Remote SDR
 
+This Remote SDR is based on the great development of F1ATB.
+
+The package was adapted to run on a RaspberryPI with Pluto SDR.
+
+Source:
 https://github.com/F1ATB/Remote-SDR
 
+More details on https://f1atb.fr/
 
 
-Short info for installation:
+# Installation:
 
-- Raspberry Pi4 
+You need a RaspberryPI installed with the latest operating system.
+See https://www.raspberrypi.org/documentation/installation/installing-images/
+
+# update/upgrad OS
 
 - apt-get update
 
@@ -40,6 +49,7 @@ Short info for installation:
 >    </Directory>
 >
 >	ErrorLog ${APACHE_LOG_DIR}/error.log
+>	
 >	CustomLog ${APACHE_LOG_DIR}/access.log combined
 >	
 > </VirtualHost>
