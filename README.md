@@ -32,7 +32,7 @@ See https://www.raspberrypi.org/documentation/installation/installing-images/
 - delete existing content and copy/paste text below:
 
 
-
+<!--
 > <VirtualHost *:80>
 >	
 >	ServerName localhost
@@ -53,7 +53,7 @@ See https://www.raspberrypi.org/documentation/installation/installing-images/
 >	CustomLog ${APACHE_LOG_DIR}/access.log combined
 >	
 > </VirtualHost>
-
+--!>
 
 
 
