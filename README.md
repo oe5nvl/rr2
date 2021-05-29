@@ -79,7 +79,7 @@ xterm_executable = /usr/bin/lxterminal
 
 ssh -X pi@192.168.8.3
 
-#Star Gnuradio for test
+# Start Gnuradio for a test
 
 - gnuradio-companion
 
@@ -92,7 +92,7 @@ if ok:
 - sudo apt-get install pkg-config
 
 
-# Install rtl sdr (optional) - not tested
+# Optional: Install rtl sdr - not tested
 
 We clone Osmocom in the Downloads folder of the root user, for example:
 
@@ -123,7 +123,7 @@ Go to the rtl-sdr folder and chain the commands:
 - sudo apt-get install gr-osmosdr
 
 
-# Install hackrf (optional) - not tested
+# Optional: Install hackrf  - not tested
 
 - apt install hackrf
 
@@ -153,7 +153,7 @@ With an RTL-SDR on the USB port, you have information by typing:
 
 - sudo pip3 install websockets
 
-# optional: Install gqrx
+# Optional: Install gqrx
 
 - sudo apt-get install gqrx-sdr
 
