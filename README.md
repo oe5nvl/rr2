@@ -72,12 +72,19 @@ then check apache2
 xterm_executable = /usr/bin/lxterminal
 
 # Connext to Raspberry (from a Linux ccomputer)
+```
 ssh -X pi@192.168.8.3
+```
+or
+```
+login to X Desktop
+```
+
 
 # Start Gnuradio for a test
-
+```
 - gnuradio-companion
-
+```
 if ok:
 
 # Install usb support
@@ -194,7 +201,7 @@ Treat given (insecure) origins as secure origins. Multiple origins can be suppli
 ```
 
 
-# start sdr program
+# Start Remote SDR program
 
 reboot
 
