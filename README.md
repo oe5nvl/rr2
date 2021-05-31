@@ -71,7 +71,7 @@ then check apache2
 
 xterm_executable = /usr/bin/lxterminal
 
-# Connext to Raspberry (from a Linux ccomputer)
+# Connext to Raspberry (from a Linux computer)
 ```
 ssh -X pi@192.168.8.3
 ```
