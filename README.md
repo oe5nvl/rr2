@@ -18,15 +18,16 @@ See https://www.raspberrypi.org/documentation/installation/installing-images/
 
 # Update/Upgrade OS
 ```
-- apt-get update
-- apt-get upgrade
+sudo apt-get update
+sudo apt-get upgrade
 ```
 
 # Install Apache Web Server
 ```
-- apt install apache2 -y
-- nano /etc/apache2/sites-available/000-default.conf  
-- delete existing content and copy/paste text below:
+sudo apt install apache2 -y
+sudo nano /etc/apache2/sites-available/000-default.conf  
+
+delete existing content and copy/paste text below:
 ```
 
 ```
