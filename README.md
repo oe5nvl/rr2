@@ -3,7 +3,7 @@
 
 This Remote SDR is based on the great development of F1ATB.
 
-The package was adapted to run on a RaspberryPI with Pluto SDR.
+The package was adapted to run on a **Raspberry PI4** with Pluto SDR.
 
 Source:
 https://github.com/F1ATB/Remote-SDR
